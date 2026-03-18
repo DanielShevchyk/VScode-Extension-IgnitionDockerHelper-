@@ -17,12 +17,22 @@
         "command": "ignition-docker.launchBrowser",
         "title": "Launch Ignition Gateways",
         "icon": "$(rocket)"
+      },
+      {
+        "command": "ignition-docker.launchDesigner",
+        "title": "Configure & Launch Designers",
+        "icon": "$(paintcan)"
       }
     ],
     "menus": {
       "editor/title": [
         {
           "command": "ignition-docker.launchBrowser",
+          "when": "resourceExtname == .yaml || resourceExtname == .yml",
+          "group": "navigation"
+        },
+        {
+          "command": "ignition-docker.launchDesigner",
           "when": "resourceExtname == .yaml || resourceExtname == .yml",
           "group": "navigation"
         }
