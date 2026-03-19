@@ -107,7 +107,7 @@ export function activate(context: vscode.ExtensionContext) {
                     const containerPort = parts[1];
 
                     if (hostPort && containerPort && containerPort.includes('8088')) {
-                        const targetUrl = `http://${serviceName}.localhost:${hostPort}`;
+                        const targetUrl = `http://localhost:${hostPort}`;
                         
                         // Check if this gateway already exists in the JSON
                         const exists = configTemplate.applications.some((app: any) => app.name === serviceName);
@@ -153,7 +153,7 @@ if (!exists) {
             vscode.window.showInformationMessage("Updated designer-launcher.json with new Gateways!");
         }
 
-// 5. Launch the actual Designer Launcher executable
+        // Need to make this more Dynamic or create a setup window/UI to define default location.
         const launcherDir = 'C:\\Program Files\\Inductive Automation\\Designer Launcher';
         const launcherExePath = path.join(launcherDir, 'designerlauncher.exe');
 
@@ -165,7 +165,7 @@ if (!exists) {
 
         try {
             const child = spawn(launcherExePath, [], {
-                cwd: launcherDir, // <--- THE MAGIC FIX: Runs the exe inside its own folder
+                cwd: launcherDir,
                 detached: true,
                 stdio: 'ignore'
             });
@@ -180,7 +180,7 @@ if (!exists) {
         } catch (spawnError) {
             vscode.window.showErrorMessage(`Failed to spawn Designer process: ${spawnError}`);
         }
-    } catch (parseError) {  // <--- WE ADDED THIS MISSING CATCH BLOCK
+    } catch (parseError) {
         vscode.window.showErrorMessage(`Failed to parse YAML or modify JSON: ${parseError}`);
     }
 });
