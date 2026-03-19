@@ -107,6 +107,7 @@ export function activate(context: vscode.ExtensionContext) {
                     const containerPort = parts[1];
 
                     if (hostPort && containerPort && containerPort.includes('8088')) {
+                        // Need to adjust to account for https sources. Prob need to check if launcher will still show cert apporoval/upload process.
                         const targetUrl = `http://localhost:${hostPort}`;
                         
                         // Check if this gateway already exists in the JSON
