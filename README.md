@@ -1,5 +1,16 @@
-Simple button shortcut to spawn browser tabs with all Ignition Containers defined. URL prefixed with service name so the state of the session wont get lost to the other tabs.
+Ignition Docker VScode Helper
 
-<img width="1303" height="751" alt="image" src="https://github.com/user-attachments/assets/9aa19182-d655-48f1-b084-175dec65340b" />
+Will only appear on YAML files.
 
-<img width="877" height="446" alt="image" src="https://github.com/user-attachments/assets/20c0de36-7812-4036-a8d4-e0774276685c" />
+Launch Ignition Gateways:
+
+Buutton shortcut to spawn browser tabs with all Ignition Containers defined. URL prefixed with service name so the state of the session wont get lost to the other tabs.
+
+
+<img width="1911" height="409" alt="image" src="https://github.com/user-attachments/assets/c2474399-6ba0-424c-a219-33230b601e3f" />
+
+Configure and Launch Designers:
+
+Appends designer-launcher.json and then launches the designer launcher.
+
+<img width="1860" height="819" alt="image" src="https://github.com/user-attachments/assets/46bce56d-68ff-4cc4-83a5-069e43bd9f62" />
