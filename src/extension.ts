@@ -4,7 +4,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as os from 'os';
 import { spawn } from 'child_process';
-
+//Random comment for feature publish test
 export function activate(context: vscode.ExtensionContext) {
     // This command name must match the one in your package.json exactly
     let disposable = vscode.commands.registerCommand('ignition-docker.launchBrowser', async () => {
